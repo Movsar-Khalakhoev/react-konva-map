@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, Layer, Stage} from "react-konva"
+import {Image, Layer, Rect, Stage} from "react-konva"
 import {ZonesContext} from "../ZonesContext"
 import {useImage} from "../hooks/useImage"
 import zonesPlanImage from "../zones-plan.jpeg"
@@ -29,8 +29,8 @@ const FullMap = () => {
   function handleDragMove() {
     if (fullMapRef.current !== null) {
       const { x, y } = fullMapRef.current.getPosition();
-      setFullMapXPosition(x * -1);
-      setFullMapYPosition(y * -1);
+      setFullMapXPosition(-x);
+      setFullMapYPosition(-y);
     }
   }
 
@@ -48,6 +48,7 @@ const FullMap = () => {
       >
         <Layer id='stuffToShow'>
           <Image image={image} />
+          <Rect width={100} height={100} x={0} y={1900} fill='red' />
         </Layer>
       </Stage>
     </div>

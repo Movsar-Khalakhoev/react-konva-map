@@ -55,8 +55,9 @@ const MiniMap = () => {
           draggable
           width={viewDimensions.width}
           height={viewDimensions.height}
-          fill='red'
-          strokeWidth={20}
+          fill='rgba(86, 204, 242, 0.1)'
+          stroke='#2d9cdb'
+          strokeWidth={2}
           ref={viewBoxRef}
         />
       </Layer>
