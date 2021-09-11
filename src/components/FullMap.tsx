@@ -48,7 +48,6 @@ const FullMap = () => {
       >
         <Layer id='stuffToShow'>
           <Image image={image} />
-          <Rect width={100} height={100} x={0} y={1900} fill='red' />
         </Layer>
       </Stage>
     </div>
