@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import FullMap from "./components/FullMap"
+import ZonesProvider from "./ZonesContext"
+import MiniMap from "./components/MiniMap"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ZonesProvider>
+      <FullMap />
+      <div style={{position: "absolute", top: 10, left: 10, backgroundColor: '#c1c1c1'}}>
+        <MiniMap />
+      </div>
+    </ZonesProvider>
+  )
 }
 
-export default App;
+export default App
