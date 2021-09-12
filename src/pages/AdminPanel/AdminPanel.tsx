@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './AdminPanel.module.sass'
 import PageLayout from "../../components/PageLayout/PageLayout"
 import Modal from "../../components/Modal/Modal"
-import {Layer, Line, Stage} from "react-konva"
+import {Layer, Line, Shape, Stage} from "react-konva"
 import {KonvaEventObject} from "konva/lib/Node"
 
 const AdminPanel = () => {
@@ -46,6 +46,12 @@ const AdminPanel = () => {
 
   const handleMouseUp = () => {
     isDrawing.current = false;
+    setLines(prevState => {
+      const lastLine = prevState[prevState.length - 1]
+      return [...prevState.slice(0, prevState.length - 1),
+          [...lastLine, lastLine[0], lastLine[1]]
+      ]
+    })
   };
 
   const closeModalHandler = () => {
@@ -88,12 +94,13 @@ const AdminPanel = () => {
                     <Line
                       key={i}
                       points={line}
-                      stroke="#df4b26"
-                      strokeWidth={5}
+                      stroke="red"
+                      strokeWidth={2}
                       tension={0.5}
                       lineCap="round"
                       globalCompositeOperation='source-over'
-                      fill='red'
+                      fill='rgba(255, 0, 0, 0.2)'
+                      closed={i === lines.length - 1 ? !isDrawing.current : true}
                     />
                   ))}
                 </Layer>
