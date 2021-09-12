@@ -8,7 +8,7 @@ const MnemonicScheme = () => {
   return (
     <PageLayout>
       <ZonesProvider>
-        <div style={{height: '100%', width: '100vw', overflow: 'hidden'}}>
+        <div style={{position: 'relative', height: '100%', width: '100vw', overflow: 'hidden'}}>
           <FullMap />
           <div style={{position: "absolute", top: 10, left: 10, backgroundColor: '#c1c1c1'}}>
             <MiniMap />
