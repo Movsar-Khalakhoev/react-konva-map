@@ -1,6 +1,6 @@
 import React from "react"
 import {Redirect, Route, Switch} from "react-router-dom"
-import MnemonicScheme from "./pages/MnemonicScheme"
+import MnemonicScheme from "./pages/MnemonicScheme/MnemonicScheme"
 import AdminPanel from "./pages/AdminPanel/AdminPanel"
 import Online from "./pages/Online/Online"
 

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './AdminPanel.module.sass'
 import PageLayout from "../../components/PageLayout/PageLayout"
 import Modal from "../../components/Modal/Modal"
-import {Layer, Line, Shape, Stage} from "react-konva"
+import {Layer, Line, Stage} from "react-konva"
 import {KonvaEventObject} from "konva/lib/Node"
 
 const AdminPanel = () => {
@@ -18,6 +18,7 @@ const AdminPanel = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
   const [lines, setLines] = React.useState<number[][]>([]);
   const isDrawing = React.useRef(false);
+  const activeCamera = React.useRef({cameraTitle: '', lastUpdate: new Date()})
 
   const activateZone = (zone: string) => {
     setActiveZone(zone)
@@ -60,12 +61,30 @@ const AdminPanel = () => {
     setActiveZone(null)
   }
 
+  React.useEffect(() => {
+    const activeCameraFromLS = JSON.parse(localStorage.getItem('activeCamera') || 'null')
+    if (activeCameraFromLS.current) {
+      activeCamera.current = activeCameraFromLS
+    }
+
+    const activeCameraListener = setInterval(() => {
+      const activeCameraFromLS = JSON.parse(localStorage.getItem('activeCamera') || 'null')
+      if (activeCameraFromLS && new Date(activeCameraFromLS.lastUpdate) > new Date(activeCamera.current.lastUpdate)) {
+        activeCamera.current = activeCameraFromLS
+        setActiveZone(activeCameraFromLS.cameraTitle)
+        setIsModalOpen(true)
+      }
+    }, 100)
+
+    return () => clearInterval(activeCameraListener)
+  }, [])
+
   return (
     <PageLayout>
       <div className={styles.zones}>
         {
           zones.map(zone => (
-            <div className={styles.zone}>
+            <div className={styles.zone} key={zone}>
               <p className={styles.zoneTitle} onClick={() => activateZone(zone)}>{zone}</p>
             </div>
           ))
