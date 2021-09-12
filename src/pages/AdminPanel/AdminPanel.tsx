@@ -48,6 +48,12 @@ const AdminPanel = () => {
     isDrawing.current = false;
   };
 
+  const closeModalHandler = () => {
+    setIsModalOpen(false)
+    setLines([])
+    setActiveZone(null)
+  }
+
   return (
     <PageLayout>
       <div className={styles.zones}>
@@ -59,7 +65,7 @@ const AdminPanel = () => {
           ))
         }
       </div>
-      <Modal isOpen={isModalOpen} closeHandler={() => setIsModalOpen(false)}>
+      <Modal isOpen={isModalOpen} closeHandler={closeModalHandler}>
         <p className={styles.modalTitle}>{activeZone}</p>
         <div className={styles.modalContainer}>
           <div className={styles.joystickContainer}>
