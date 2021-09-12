@@ -30,7 +30,7 @@ export function useImage(url: string, crossOrigin?: string) {
         setState({image: undefined, status: 'loading'});
       };
     },
-    [url]
+    [url, crossOrigin]
   );
 
   // return array because it it better to use in case of several useImage hooks
