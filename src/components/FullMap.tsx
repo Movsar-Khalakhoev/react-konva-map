@@ -1,8 +1,8 @@
 import React from 'react'
-import {Image, Layer, Rect, Stage} from "react-konva"
-import {ZonesContext} from "../ZonesContext"
+import {Image, Layer, Stage} from "react-konva"
+import {ZonesContext} from "../context/ZonesContext"
 import {useImage} from "../hooks/useImage"
-import zonesPlanImage from "../zones-plan.jpeg"
+import zonesPlanImage from "../assets/zones-plan.jpeg"
 import {KonvaEventObject} from "konva/lib/Node"
 import {FULL_MAP_HEIGHT, FULL_MAP_WIDTH} from "./MiniMap"
 

@@ -1,18 +1,15 @@
 import React from "react"
-import FullMap from "./components/FullMap"
-import ZonesProvider from "./ZonesContext"
-import MiniMap from "./components/MiniMap"
+import {Redirect, Route, Switch} from "react-router-dom"
+import MnemonicScheme from "./pages/MnemonicScheme"
+import AdminPanel from "./pages/AdminPanel/AdminPanel"
 
 function App() {
   return (
-    <ZonesProvider>
-      <div style={{height: '100vh', width: '100vw', overflow: 'hidden'}}>
-        <FullMap />
-        <div style={{position: "absolute", top: 10, left: 10, backgroundColor: '#c1c1c1'}}>
-          <MiniMap />
-        </div>
-      </div>
-    </ZonesProvider>
+    <Switch>
+      <Route path='/mnemonic-scheme' component={MnemonicScheme} />
+      <Route path='/admin-panel' component={AdminPanel} />
+      <Redirect to='/admin-panel' />
+    </Switch>
   )
 }
 

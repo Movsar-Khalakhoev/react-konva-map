@@ -1,5 +1,5 @@
 import React from 'react'
-import {ZonesContext} from "../ZonesContext"
+import {ZonesContext} from "../context/ZonesContext"
 import {Stage} from "react-konva/lib/ReactKonvaCore"
 import {Layer, Rect} from "react-konva"
 import IRect from "konva/lib/shapes/Rect"
