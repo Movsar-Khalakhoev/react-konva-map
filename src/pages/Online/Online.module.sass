@@ -1,0 +1,23 @@
+.cameras
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 90%
+  margin: auto
+  padding-top: 20px
+
+.camera
+  width: 24%
+  height: 200px
+  background-color: #c1c1c1
+  border: 1px solid #000
+  margin-bottom: 10px
+  &Active
+    border-width: 5px
+    animation: active .8s infinite
+
+@keyframes active
+  from
+    border-color: transparent
+  to
+    border-color: red
