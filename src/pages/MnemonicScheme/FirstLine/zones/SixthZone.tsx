@@ -9,7 +9,6 @@ const SixthZone = () => {
       <Line points={[13, .5, 13, 14]} stroke='black' strokeWidth={1} />
       <Line points={[14, 28, 12, 31, 9, 31, 9, 37, 6, 32, 9, 37, 9, 41, 13, 41, 13, 58.5]} stroke='black' strokeWidth={1} />
       <Line points={[29, .5, 29, 30, 32, 30, 32, 37, 35, 33, 32, 37, 32, 41, 29, 41, 29, 58.5]} stroke='black' strokeWidth={1} />
-      <Line points={[]} stroke='black' strokeWidth={1} />
     </Layer>
   )
 }
