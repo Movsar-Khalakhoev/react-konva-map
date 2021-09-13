@@ -1,7 +1,7 @@
 import React from 'react'
 import {Layer, Line, Rect} from "react-konva"
 
-const SecondZone = () => {
+const ThirdZone = () => {
   return (
     <Layer x={240} y={200}>
       <Rect width={31} height={55} stroke='red' strokeWidth={1} />
@@ -15,4 +15,4 @@ const SecondZone = () => {
   )
 }
 
-export default SecondZone
+export default ThirdZone
