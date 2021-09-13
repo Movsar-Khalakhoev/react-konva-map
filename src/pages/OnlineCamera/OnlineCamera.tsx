@@ -11,7 +11,6 @@ const OnlineCamera = () => {
       <div className={styles.actions}>
         <button className={styles.actionsArchive}>В архив</button>
         <button className={styles.actionsGoBack} onClick={history.goBack}>Обратно</button>
-        <Link className={styles.actionsEdit} to='/admin-panel'>Редактировать камеру</Link>
       </div>
     </PageLayout>
   )

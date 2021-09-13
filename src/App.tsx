@@ -12,7 +12,7 @@ function App() {
       <Route path='/admin-panel' component={AdminPanel} />
       <Route path='/online' component={Online} exact />
       <Route path='/online/camera' component={OnlineCamera} />
-      <Redirect to='/admin-panel' />
+      <Redirect to='/mnemonic-scheme' />
     </Switch>
   )
 }

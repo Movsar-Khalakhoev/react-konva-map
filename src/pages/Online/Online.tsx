@@ -41,7 +41,10 @@ const Online = () => {
         Активировать</button>
       <div className={styles.cameras}>
         {cameras.map((camera, index) => (
-          <Link key={camera} to='/online/camera' className={`${styles.camera} ${index === 2 && isActiveCamera ? styles.cameraActive : ''}`} />
+          <div className={`${styles.camera} ${index === 2 && isActiveCamera ? styles.cameraActive : ''}`}>
+            <Link className={styles.cameraLink} key={camera} to='/online/camera' />
+            <button className={styles.editButton}><Link to='/admin-panel'>Редактировать</Link></button>
+          </div>
         ))}
       </div>
     </PageLayout>
