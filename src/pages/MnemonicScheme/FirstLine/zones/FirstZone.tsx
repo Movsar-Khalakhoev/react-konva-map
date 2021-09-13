@@ -1,14 +1,9 @@
 import React from 'react'
-import {useImage} from "../../../../hooks/useImage"
-import firstZone from '../../../../assets/img.png'
-import {Image, Layer, Line, Rect} from "react-konva"
+import {Layer, Line, Rect} from "react-konva"
 
 const FirstZone = () => {
-  const {image} = useImage(firstZone)
-
   return (
     <Layer x={200} y={100}>
-      <Image x={-2} y={-2} image={image} scaleY={.15} scaleX={.15} opacity={.2} />
       <Rect width={78} height={30} stroke='red' strokeWidth={1} />
       <Rect x={4.5} y={2} width={68} height={26} stroke='red' strokeWidth={1} />
       <Line points={[7, 14, 7, 11, 18, 11, 18, 14, 18, 9, 20, 9]} stroke='black' strokeWidth={1} />
@@ -16,7 +11,6 @@ const FirstZone = () => {
       <Line points={[75, 14, 75, 7, 38, 7]} stroke='black' strokeWidth={1} />
       <Line points={[35, 7, 30, 7]} stroke='black' strokeWidth={1} />
       <Line points={[28, 7, 28, 6, 22, 6, 22, 14, 22, 9, 28, 9, 28, 20, 31, 20, 31, 13, 28, 13, 28, 7]} stroke='black' strokeWidth={1} />
-      <Line points={[]} stroke='black' strokeWidth={1} />
     </Layer>
   )
 }
