@@ -1,5 +1,5 @@
 import React from 'react'
-import {Layer, Line, Rect} from "react-konva"
+import {Layer, Line, Rect, Text} from "react-konva"
 
 const ThirdZone = () => {
   return (
@@ -11,6 +11,8 @@ const ThirdZone = () => {
       <Line points={[39, 12, 43, 17]} stroke='black' strokeWidth={1} />
       <Line points={[5, 34, 5, 40, 7, 40]} stroke='black' strokeWidth={1} />
       <Line points={[19, 40, 21, 42, 39, 42, 39, 34]} stroke='black' strokeWidth={1} />
+      <Text x={13} y={20} text='Зона 3' fontSize={6} />
+      <Text x={10} y={26} text='Штабелер' fontSize={5} />
     </Layer>
   )
 }

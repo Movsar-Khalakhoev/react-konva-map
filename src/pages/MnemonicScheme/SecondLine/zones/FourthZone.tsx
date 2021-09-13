@@ -1,5 +1,5 @@
 import React from 'react'
-import {Layer, Line, Rect} from "react-konva"
+import {Layer, Line, Rect, Text} from "react-konva"
 
 const FourthZone = () => {
   return (
@@ -9,6 +9,9 @@ const FourthZone = () => {
       <Line points={[4, 4.5, 20, 4.5]} stroke='black' strokeWidth={1} />
       <Line points={[19, 11, 19, 24, 4, 24]} stroke='black' strokeWidth={1} />
       <Line points={[]} stroke='black' strokeWidth={1} />
+      <Text x={4} y={5} text='Зона 4' fontSize={5} />
+      <Text x={3} y={11} text='Магазин' fontSize={4} />
+      <Text x={3} y={14} text='поддонов' fontSize={4} />
     </Layer>
   )
 }
