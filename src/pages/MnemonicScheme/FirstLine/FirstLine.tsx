@@ -3,6 +3,7 @@ import FirstZone from "./zones/FirstZone"
 import SecondZone from "./zones/SecondZone"
 import ThirdZone from "./zones/ThirdZone"
 import FourthZone from "./zones/FourthZone"
+import FifthZone from "./zones/FifthZone"
 
 const FirstLine = () => {
   return (
@@ -11,6 +12,7 @@ const FirstLine = () => {
       <SecondZone />
       <ThirdZone />
       <FourthZone />
+      <FifthZone />
     </>
   )
 }
