@@ -3,7 +3,7 @@ import {Layer, Line, Rect} from "react-konva"
 
 const ThirdZone = () => {
   return (
-    <Layer x={240} y={200}>
+    <Layer x={280} y={200}>
       <Rect width={31} height={55} stroke='red' strokeWidth={1} />
       <Rect x={2.3} y={3.7} width={26.6} height={46} stroke='red' strokeWidth={1} />
       <Line points={[14.5, 15, 7.5, 15, 7.5, 30.5]} stroke='black' strokeWidth={1} />
