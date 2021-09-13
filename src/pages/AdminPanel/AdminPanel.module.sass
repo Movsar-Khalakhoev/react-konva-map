@@ -17,34 +17,83 @@
     &:hover
       color: #980000
 
-.modal
-  &Title
-    margin-top: 0
-  &Container
-    display: flex
+.title
+  margin-top: 10px
+  margin-left: 10px
+  margin-bottom: 10px
+  font-size: 20px
+
+.container
+  display: flex
+  height: 90%
+
+.rightPanel
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-direction: column
+  margin-right: 10px
+  flex-grow: 1
+  border: 1px solid #000
 
 .joystick
   &Container
+    position: relative
     display: flex
     flex-direction: column
-  &Button
-    height: 30px
-    border: 1px solid red
-    background-color: #fff
-    margin-bottom: 10px
-    padding: 0 20px
+    align-items: center
+    height: 200px
+  &Buttons
+    position: absolute
+    height: 100px
+    width: 100px
+    top: 30px
+  &TopArrow, &BottomArrow, &LeftArrow, &RightArrow, &RotateRight, &RotateLeft, &ZoomIn, &ZoomOut
+    position: absolute
     cursor: pointer
-    &:hover
-      background-color: #bbbbbb
+  &TopArrow, &BottomArrow
+    width: 20px
+    height: 30px
+    left: calc(50% - 10px)
+  &TopArrow
+    top: 0
+  &BottomArrow
+    bottom: 0
+  &LeftArrow, &RightArrow
+    width: 30px
+    height: 20px
+    top: calc(50% - 10px)
+  &LeftArrow
+    left: 0
+  &RightArrow
+    right: 0
+  &RotateRight, &RotateLeft
+    width: 30px
+    height: 30px
+    top: 0
+  &RotateRight
+    right: 0
+  &RotateLeft
+    left: 0
+  &ZoomIn, &ZoomOut
+    width: 30px
+    height: 30px
+    bottom: 0
+  &ZoomIn
+    left: 0
+  &ZoomOut
+    right: 0
 
 .broadcast
-  height: 500px
-  width: 500px
+  height: 100%
   background-color: #9d9d9d
   &Container
+    width: 80%
     margin: 0 10px
 
 .prevStateButton
+  width: 30px
+  height: 30px
   position: absolute
   margin-top: 5px
   margin-left: 5px
@@ -54,6 +103,7 @@
   &Container
     display: flex
     flex-direction: column
+    width: 70%
   &Create, &Apply, &Cancel
     height: 30px
     border: 1px solid red
