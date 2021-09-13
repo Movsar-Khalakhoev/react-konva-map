@@ -8,7 +8,6 @@ const PageLayout: React.FC = ({children}) => {
       <div className={styles.navbar}>
         <div className={styles.buttonsGroup}>
           <NavLink to='/mnemonic-scheme' className={styles.button} activeClassName={styles.buttonActive}>Мнемосхема</NavLink>
-          <NavLink to='/admin-panel' className={styles.button} activeClassName={styles.buttonActive}>Админ. панель</NavLink>
           <NavLink to='/online' className={styles.button} activeClassName={styles.buttonActive}>Онлайн</NavLink>
         </div>
       </div>
