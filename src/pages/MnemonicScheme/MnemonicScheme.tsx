@@ -1,9 +1,13 @@
 import React from 'react'
 import FullMap from "../../components/FullMap"
-import MiniMap from "../../components/MiniMap"
 import ZonesProvider from "../../context/ZonesContext"
 import PageLayout from "../../components/PageLayout/PageLayout"
 import styles from './MnemonicScheme.module.sass'
+
+export interface ZoneProps {
+  x: number
+  y: number
+}
 
 const MnemonicScheme = () => {
 
@@ -16,9 +20,9 @@ const MnemonicScheme = () => {
       <ZonesProvider>
         <div className={styles.maps}>
           <FullMap />
-          <div className={styles.minimapWrapper}>
-            <MiniMap />
-          </div>
+          {/*<div className={styles.minimapWrapper}>*/}
+          {/*  <MiniMap />*/}
+          {/*</div>*/}
           <div className={styles.cameras}>
             <button className={styles.camera} onClick={() => setActiveCamera('Камера 1')}>Камера 1</button>
             <button className={styles.camera} onClick={() => setActiveCamera('Камера 2')}>Камера 2</button>

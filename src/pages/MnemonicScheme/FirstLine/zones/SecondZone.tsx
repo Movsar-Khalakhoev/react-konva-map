@@ -1,9 +1,14 @@
 import React from 'react'
 import {Layer, Line, Rect, Text} from "react-konva"
+import {ZoneProps} from "../../MnemonicScheme"
 
-const SecondZone = () => {
+const ZONE_SCALE = 3.85
+
+interface SecondZoneProps extends ZoneProps {}
+
+const SecondZone: React.FC<SecondZoneProps> = ({x, y}) => {
   return (
-    <Layer x={300} y={100}>
+    <Layer x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
       <Rect width={78} height={30} stroke='red' strokeWidth={1} />
       <Rect x={4.5} y={2} width={68} height={26} stroke='red' strokeWidth={1} />
       <Line points={[7, 9, 7, 5, 18, 5, 18, 9, 18, 3, 75, 3, 75, 9]} stroke='black' strokeWidth={1} />

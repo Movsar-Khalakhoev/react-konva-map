@@ -12,15 +12,15 @@ import NinthZone from "./zones/NinthZone"
 const SecondLine = () => {
   return (
     <>
-      <FirstZone />
-      <SecondZone />
-      <ThirdZone />
-      <FourthZone />
-      <FifthZone />
-      <SixthZone />
-      <SeventhZone />
-      <EighthZone />
-      <NinthZone />
+      <FirstZone x={200} y={200} />
+      <SecondZone x={240} y={200} />
+      <ThirdZone x={280} y={200} />
+      <FourthZone x={320} y={200} />
+      <FifthZone x={360} y={200} />
+      <SixthZone x={430} y={200} />
+      <SeventhZone x={500} y={200} />
+      <EighthZone x={570} y={200} />
+      <NinthZone x={640} y={200} />
     </>
   )
 }

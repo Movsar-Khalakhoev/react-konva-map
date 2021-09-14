@@ -2,9 +2,11 @@ import React from 'react'
 import {Image, Layer, Stage} from "react-konva"
 import {ZonesContext} from "../context/ZonesContext"
 import {useImage} from "../hooks/useImage"
-import zonesPlanImage from "../assets/zones-plan.svg"
+import zonesPlanImage from "../assets/zones-plan1.jpg"
 import {KonvaEventObject} from "konva/lib/Node"
 import {FULL_MAP_HEIGHT, FULL_MAP_WIDTH} from "./MiniMap"
+import FirstLine from "../pages/MnemonicScheme/FirstLine/FirstLine"
+import SecondLine from "../pages/MnemonicScheme/SecondLine/SecondLine"
 
 const scaleBy = 1.03;
 
@@ -46,9 +48,11 @@ const FullMap = () => {
         onWheel={zoomStage}
         ref={fullMapRef}
       >
-        <Layer id='stuffToShow'>
-          <Image image={image} />
+        <Layer>
+          <Image x={0} y={0} image={image} opacity={.2} />
         </Layer>
+        <FirstLine />
+        <SecondLine />
       </Stage>
     </div>
   )

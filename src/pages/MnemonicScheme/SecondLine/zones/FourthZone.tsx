@@ -1,9 +1,12 @@
 import React from 'react'
 import {Layer, Line, Rect, Text} from "react-konva"
+import {ZoneProps} from "../../MnemonicScheme"
 
-const FourthZone = () => {
+interface FourthZoneProps extends ZoneProps {}
+
+const FourthZone: React.FC<FourthZoneProps> = ({x, y}) => {
   return (
-    <Layer x={320} y={200}>
+    <Layer x={x} y={y}>
       <Rect width={24.5} height={24} stroke='red' strokeWidth={1} />
       <Rect x={2.3} y={3} width={20} height={18} stroke='red' strokeWidth={1} />
       <Line points={[4, 4.5, 20, 4.5]} stroke='black' strokeWidth={1} />

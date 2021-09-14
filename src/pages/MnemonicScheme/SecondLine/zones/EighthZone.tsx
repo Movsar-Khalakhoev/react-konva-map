@@ -1,10 +1,12 @@
 import React from 'react'
 import {Layer, Line, Rect, Text} from "react-konva"
+import {ZoneProps} from "../../MnemonicScheme"
 
-const EighthZone = () => {
+interface EighthZoneProps extends ZoneProps {}
 
+const EighthZone: React.FC<EighthZoneProps> = ({x, y}) => {
   return (
-    <Layer x={570} y={200}>
+    <Layer x={x} y={y}>
       <Rect width={56} height={55} stroke='red' strokeWidth={1} />
       <Rect x={4} y={3} width={48} height={49} stroke='red' strokeWidth={1} />
       <Line points={[19.5, 54, 5, 39, 5, 8, 43, 8, 50, 13, 50, 37, 48, 37, 48, 46]} stroke='black' strokeWidth={1} />
