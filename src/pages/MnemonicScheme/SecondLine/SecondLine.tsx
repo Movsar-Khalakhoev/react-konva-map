@@ -9,18 +9,21 @@ import SeventhZone from "./zones/SeventhZone"
 import EighthZone from "./zones/EighthZone"
 import NinthZone from "./zones/NinthZone"
 
+const OFFSET_X = 1200
+const OFFSET_Y = 500
+
 const SecondLine = () => {
   return (
     <>
-      <FirstZone x={200} y={200} />
-      <SecondZone x={240} y={200} />
-      <ThirdZone x={280} y={200} />
-      <FourthZone x={320} y={200} />
-      <FifthZone x={360} y={200} />
-      <SixthZone x={430} y={200} />
-      <SeventhZone x={500} y={200} />
-      <EighthZone x={570} y={200} />
-      <NinthZone x={640} y={200} />
+      <FirstZone x={789 + OFFSET_X} y={1743 + OFFSET_Y} />
+      <SecondZone x={687 + OFFSET_X} y={1743 + OFFSET_Y} />
+      <ThirdZone x={593 + OFFSET_X} y={1743 + OFFSET_Y} />
+      <FourthZone x={578 + OFFSET_X} y={1429 + OFFSET_Y} />
+      <FifthZone x={266 + OFFSET_X} y={1220 + OFFSET_Y} />
+      <SixthZone x={980 + OFFSET_X} y={1863 + OFFSET_Y} />
+      <SeventhZone x={999 + OFFSET_X} y={319 + OFFSET_Y} />
+      <EighthZone x={390 + OFFSET_X} y={1409 + OFFSET_Y} />
+      <NinthZone x={390 + OFFSET_X} y={1574 + OFFSET_Y} />
     </>
   )
 }

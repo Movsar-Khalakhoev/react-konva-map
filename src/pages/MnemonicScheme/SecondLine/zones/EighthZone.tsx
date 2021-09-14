@@ -2,11 +2,13 @@ import React from 'react'
 import {Layer, Line, Rect, Text} from "react-konva"
 import {ZoneProps} from "../../MnemonicScheme"
 
+const ZONE_SCALE = 2.87
+
 interface EighthZoneProps extends ZoneProps {}
 
 const EighthZone: React.FC<EighthZoneProps> = ({x, y}) => {
   return (
-    <Layer x={x} y={y}>
+    <Layer x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
       <Rect width={56} height={55} stroke='red' strokeWidth={1} />
       <Rect x={4} y={3} width={48} height={49} stroke='red' strokeWidth={1} />
       <Line points={[19.5, 54, 5, 39, 5, 8, 43, 8, 50, 13, 50, 37, 48, 37, 48, 46]} stroke='black' strokeWidth={1} />

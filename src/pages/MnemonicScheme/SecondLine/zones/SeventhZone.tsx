@@ -2,11 +2,13 @@ import React from 'react'
 import {Layer, Line, Rect, Text} from "react-konva"
 import {ZoneProps} from "../../MnemonicScheme"
 
+const ZONE_SCALE = 2.2
+
 interface SeventhZoneProps extends ZoneProps {}
 
 const SeventhZone: React.FC<SeventhZoneProps> = ({x, y}) => {
   return (
-    <Layer x={x} y={y}>
+    <Layer x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
       <Rect width={54} height={35} stroke='red' strokeWidth={1} />
       <Rect x={2.5} y={3.7} width={47.5} height={27} stroke='red' strokeWidth={1} />
       <Line points={[10, 0.5, 10, 24, 53.5, 24]} stroke='black' strokeWidth={1} />
