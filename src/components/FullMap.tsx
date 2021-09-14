@@ -11,7 +11,7 @@ import SecondLine from "../pages/MnemonicScheme/SecondLine/SecondLine"
 const scaleBy = 1.03;
 
 const FullMap = () => {
-  const {image} = useImage(process.env.NODE_ENV === 'production' ? `${window.location.host}/react-konva-map/build${zonesPlanImage}` : zonesPlanImage)
+  const {image} = useImage(process.env.NODE_ENV === 'production' ? `/react-konva-map/build${zonesPlanImage.slice(1)}` : zonesPlanImage)
   const {
     fullMapRef,
     setFullMapXPosition,
