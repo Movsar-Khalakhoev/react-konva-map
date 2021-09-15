@@ -6,6 +6,7 @@ import FourthZone from "./zones/FourthZone"
 import FifthZone from "./zones/FifthZone"
 import SixthZone from "./zones/SixthZone"
 import SeventhZone from "./zones/SeventhZone"
+import {Layer, Rect} from "react-konva"
 
 const OFFSET_X = 300
 const OFFSET_Y = 2200

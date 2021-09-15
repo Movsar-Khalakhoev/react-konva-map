@@ -4,11 +4,12 @@ import {ZonesContext} from "../context/ZonesContext"
 import {useImage} from "../hooks/useImage"
 import zonesPlanImage from "../assets/zones-plan1.jpg"
 import {KonvaEventObject} from "konva/lib/Node"
-import {FULL_MAP_HEIGHT, FULL_MAP_WIDTH} from "./MiniMap"
 import FirstLine from "../pages/MnemonicScheme/FirstLine/FirstLine"
 import SecondLine from "../pages/MnemonicScheme/SecondLine/SecondLine"
 
-const scaleBy = 1.03;
+const scaleBy = 1.05;
+export const FULL_MAP_WIDTH = window.innerWidth;
+export const FULL_MAP_HEIGHT = window.innerHeight;
 
 const FullMap = () => {
   const {image} = useImage(process.env.NODE_ENV === 'production' ? `/react-konva-map/build${zonesPlanImage.slice(1)}` : zonesPlanImage)
@@ -22,9 +23,23 @@ const FullMap = () => {
 
   function zoomStage(event: KonvaEventObject<WheelEvent>) {
     const stage = fullMapRef.current
+    const oldScale = stage!.scaleX();
     if (stage !== null) {
       const newScale = event.evt.deltaY > 0 ? scale * scaleBy : scale / scaleBy;
       setScale(newScale)
+
+      const pointerPosition = stage.getPointerPosition();
+      const mousePointTo = {
+        x: (pointerPosition!.x - stage.x()) / oldScale,
+        y: (pointerPosition!.y - stage.y()) / oldScale,
+      };
+      stage.scale({ x: newScale, y: newScale });
+      const newPos = {
+        x: pointerPosition!.x - mousePointTo.x * newScale,
+        y: pointerPosition!.y - mousePointTo.y * newScale,
+      }
+
+      stage.position(newPos);
     }
   }
 
@@ -41,14 +56,14 @@ const FullMap = () => {
       <Stage
         width={FULL_MAP_WIDTH}
         height={FULL_MAP_HEIGHT}
-        scaleX={scale}
-        scaleY={scale}
+        scaleX={scale * .3}
+        scaleY={scale * .3}
         onDragMove={handleDragMove}
         draggable={true}
         onWheel={zoomStage}
         ref={fullMapRef}
       >
-        <Layer>
+        <Layer  dragDistance={2}>
           <Image x={0} y={0} image={image} opacity={.2} />
         </Layer>
         <FirstLine />

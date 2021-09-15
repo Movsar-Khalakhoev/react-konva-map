@@ -6,8 +6,6 @@ import IRect from "konva/lib/shapes/Rect"
 
 const MINI_MAP_WIDTH = 271;
 const MINI_MAP_HEIGHT = 271;
-export const FULL_MAP_WIDTH = 2000;
-export const FULL_MAP_HEIGHT = 2000;
 
 const MiniMap = () => {
   const viewBoxRef = React.useRef<IRect.Rect>(null)
@@ -39,8 +37,6 @@ const MiniMap = () => {
       width={MINI_MAP_WIDTH}
       height={MINI_MAP_HEIGHT}
       ref={miniMapRef}
-      scaleX={MINI_MAP_WIDTH / FULL_MAP_WIDTH}
-      scaleY={MINI_MAP_HEIGHT / FULL_MAP_HEIGHT}
     >
       {/*<Layer id='screens'>*/}
       {/*  <Group>*/}
