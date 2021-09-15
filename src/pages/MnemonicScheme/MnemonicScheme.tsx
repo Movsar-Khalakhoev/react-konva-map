@@ -23,11 +23,29 @@ const MnemonicScheme = () => {
           {/*<div className={styles.minimapWrapper}>*/}
           {/*  <MiniMap />*/}
           {/*</div>*/}
-          <div className={styles.cameras}>
-            <button className={styles.camera} onClick={() => setActiveCamera('Камера 1')}>Камера 1</button>
-            <button className={styles.camera} onClick={() => setActiveCamera('Камера 2')}>Камера 2</button>
-            <button className={styles.camera} onClick={() => setActiveCamera('Камера 3')}>Камера 3</button>
-            <button className={styles.camera} onClick={() => setActiveCamera('Камера 4')}>Камера 4</button>
+          <div className={styles.zones}>
+            <div className={styles.firstZone}>
+              <p className={styles.lineTitle}>Линия 1</p>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 1')}>Зона 1</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 2')}>Зона 2</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 3')}>Зона 3</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 4</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 5</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 6</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 7</button>
+            </div>
+            <div className={styles.secondZone}>
+              <p className={styles.lineTitle}>Линия 2</p>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 1')}>Зона 1</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 2')}>Зона 2</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 3')}>Зона 3</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 4</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 5</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 6</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 7</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 8</button>
+              <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 9</button>
+            </div>
           </div>
         </div>
       </ZonesProvider>
