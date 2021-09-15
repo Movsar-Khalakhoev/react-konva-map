@@ -1,5 +1,5 @@
 import React from 'react'
-import {Layer, Line, Rect, Text} from "react-konva"
+import {Group, Line, Rect, Text} from "react-konva"
 import {ZoneProps} from "../../MnemonicScheme"
 
 const ZONE_SCALE = 3
@@ -9,7 +9,7 @@ interface SeventhZoneProps extends ZoneProps {}
 
 const SeventhZone: React.FC<SeventhZoneProps> = ({x, y}) => {
   return (
-    <Layer x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
+    <Group x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
       <Rect width={39.5} height={26} stroke='red' strokeWidth={STROKE_WIDTH} />
       <Rect x={3} y={3} width={34} height={20} stroke='red' strokeWidth={STROKE_WIDTH} />
       <Line points={[11, 11, 10, 11, 10, 25.5]} stroke='black' strokeWidth={STROKE_WIDTH} />
@@ -20,7 +20,7 @@ const SeventhZone: React.FC<SeventhZoneProps> = ({x, y}) => {
       <Text x={10} y={4} text='Зона 7' fontSize={6}/>
       <Text x={7} y={11} text='Гофрировщик-' fontSize={4} />
       <Text x={6} y={14} text='подпрессовщик' fontSize={4} />
-    </Layer>
+    </Group>
   )
 }
 

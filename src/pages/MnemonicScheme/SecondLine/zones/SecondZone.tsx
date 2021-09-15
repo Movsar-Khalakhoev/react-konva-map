@@ -1,5 +1,5 @@
 import React from 'react'
-import {Layer, Line, Rect, Text} from "react-konva"
+import {Group, Line, Rect, Text} from "react-konva"
 import {ZoneProps} from "../../MnemonicScheme"
 
 const ZONE_SCALE = 2.67
@@ -9,7 +9,7 @@ interface SecondZoneProps extends ZoneProps {}
 
 const SecondZone: React.FC<SecondZoneProps> = ({x, y}) => {
   return (
-    <Layer x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
+    <Group x={x} y={y} scaleX={ZONE_SCALE} scaleY={ZONE_SCALE}>
       <Rect width={31} height={55} stroke='red' strokeWidth={STROKE_WIDTH} />
       <Rect x={2.3} y={3.7} width={26.6} height={46} stroke='red' strokeWidth={STROKE_WIDTH} />
       <Line points={[14.5, 15, 7.5, 15, 7.5, 30.5]} stroke='black' strokeWidth={STROKE_WIDTH} />
@@ -20,7 +20,7 @@ const SecondZone: React.FC<SecondZoneProps> = ({x, y}) => {
       <Text x={6} y={7} text='Зона 2' fontSize={6} />
       <Text x={4} y={20} text='Упаковочная' fontSize={4} />
       <Text x={8} y={24} text='машина 2' fontSize={4} />
-    </Layer>
+    </Group>
   )
 }
 

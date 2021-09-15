@@ -1,4 +1,5 @@
 import React from 'react'
+import {Layer} from "react-konva"
 import FirstZone from "./zones/FirstZone"
 import SecondZone from "./zones/SecondZone"
 import ThirdZone from "./zones/ThirdZone"
@@ -6,22 +7,21 @@ import FourthZone from "./zones/FourthZone"
 import FifthZone from "./zones/FifthZone"
 import SixthZone from "./zones/SixthZone"
 import SeventhZone from "./zones/SeventhZone"
-import {Layer, Rect} from "react-konva"
 
 const OFFSET_X = 300
 const OFFSET_Y = 2200
 
 const FirstLine = () => {
   return (
-    <>
-      <FirstZone x={393 + OFFSET_X} y={1765 + OFFSET_Y} />
-      <SecondZone x={393 + OFFSET_X} y={1895 + OFFSET_Y} />
-      <ThirdZone x={170 + OFFSET_X} y={1568 + OFFSET_Y} />
-      <FourthZone x={332 + OFFSET_X} y={1415 + OFFSET_Y} />
-      <FifthZone x={397 + OFFSET_X} y={1180 + OFFSET_Y} />
-      <SixthZone x={534 + OFFSET_X} y={1440 + OFFSET_Y} />
-      <SeventhZone x={150 + OFFSET_X} y={40 + OFFSET_Y} />
-    </>
+    <Layer x={OFFSET_X} y={OFFSET_Y}>
+      <FirstZone x={393} y={1765} />
+      <SecondZone x={393} y={1895} />
+      <ThirdZone x={170} y={1568} />
+      <FourthZone x={332} y={1415} />
+      <FifthZone x={397} y={1180} />
+      <SixthZone x={534} y={1440} />
+      <SeventhZone x={150} y={40} />
+    </Layer>
   )
 }
 
