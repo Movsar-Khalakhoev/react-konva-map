@@ -3,6 +3,7 @@ import FullMap from "../../components/FullMap"
 import ZonesProvider from "../../context/ZonesContext"
 import PageLayout from "../../components/PageLayout/PageLayout"
 import styles from './MnemonicScheme.module.sass'
+import Zoom from "./components/Zoom"
 
 export interface ZoneProps {
   x: number
@@ -20,9 +21,6 @@ const MnemonicScheme = () => {
       <ZonesProvider>
         <div className={styles.maps}>
           <FullMap />
-          {/*<div className={styles.minimapWrapper}>*/}
-          {/*  <MiniMap />*/}
-          {/*</div>*/}
           <div className={styles.zones}>
             <div className={styles.firstZone}>
               <p className={styles.lineTitle}>Линия 1</p>
@@ -47,6 +45,7 @@ const MnemonicScheme = () => {
               <button className={styles.zone} onClick={() => setActiveCamera('Камера 4')}>Зона 9</button>
             </div>
           </div>
+          <Zoom />
         </div>
       </ZonesProvider>
     </PageLayout>

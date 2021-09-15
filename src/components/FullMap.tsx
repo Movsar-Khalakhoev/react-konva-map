@@ -7,7 +7,7 @@ import {KonvaEventObject} from "konva/lib/Node"
 import FirstLine from "../pages/MnemonicScheme/FirstLine/FirstLine"
 import SecondLine from "../pages/MnemonicScheme/SecondLine/SecondLine"
 
-const scaleBy = 1.05;
+export const scaleBy = 1.05;
 export const FULL_MAP_WIDTH = window.innerWidth;
 export const FULL_MAP_HEIGHT = window.innerHeight;
 
